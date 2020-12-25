@@ -2,41 +2,41 @@ module.exports = class nation {
     cities = [];
     projects = [];
     info = {
-        id= 0,
-        name = '',
-        prename = '',
-        color = '',
-        uuid= '',
-        flag = '',
-        government = '',
-        founded = '',
-        daysold = 0,
-        approval = 0.0,
-        rank = 0,
-        totalnations = 0,
-        cities = 0,
-        score = 0.0,
-        population = 0,
-        gdp = 0,
-        infra = 0,
-        land = 0,
-        vm = false,
-        beigeturns = 0,
-        radiation = 0.0,
-        season = '',
-        citytimer = 0,
-        lastactive = 0,
-        leader = {
+        id: 0,
+        name: '',
+        prename: '',
+        color: '',
+        uuid: '',
+        flag: '',
+        government: '',
+        founded: '',
+        daysold: 0,
+        approval: 0.0,
+        rank: 0,
+        totalnations: 0,
+        cities: 0,
+        score: 0.0,
+        population: 0,
+        gdp: 0,
+        infra: 0,
+        land: 0,
+        vm: false,
+        beigeturns: 0,
+        radiation: 0.0,
+        season: '',
+        citytimer: 0,
+        lastactive: 0,
+        leader: {
             name: '',
             title: ''
         },
-        policies = {
+        policies: {
             social: '',
             domestic: '',
             war: '',
             economy: ''
         },
-        position = {
+        position: {
             continent: '',
             latitude: '',
             longitude: ''
@@ -152,7 +152,7 @@ module.exports = class nation {
         this.info.season = raw.season;
         this.military.canspy = raw.espionage_available;
         projects.forEach(p => {
-            if(raw[p] === "1"){
+            if (raw[p] === "1") {
                 this.projects.push(p);
             }
         })

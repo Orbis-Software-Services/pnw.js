@@ -30,10 +30,10 @@ module.exports = class APIClient {
         return new Promise((resolve, reject) => {
             this.#session.get(`${baseURL}nation/id=${id}&key=${this.#api}`).then(res => {
                 let data = JSON.parse(res.text);
-                if(data.success){
+                if (data.success) {
                     resolve(new classes.nation(data));
                 }
-                else{
+                else {
                     reject(`API request failed: ${data.general_message}`);
                 }
             }).catch(err => reject(`API request failed: ${err}`));
