@@ -1,0 +1,40 @@
+{
+  "name": "@apocalypsecalculator/pnw.js",
+  "version": "1.0.2",
+  "description": "A powerful Node.js library for easy interaction with the Politics and War API",
+  "main": "./index.js",
+  "exports": {
+    ".": [
+      {
+        "require": "./index.js"
+      },
+      "./src/index.js"
+    ]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ApocalypseCalculator/pnw.js.git"
+  },
+  "keywords": [
+    "pnw",
+    "api",
+    "client",
+    "node"
+  ],
+  "author": "ApocalypseCalculator <apocalypsecalculator@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ApocalypseCalculator/pnw.js/issues"
+  },
+  "homepage": "https://github.com/ApocalypseCalculator/pnw.js#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "superagent": "^6.1.0"
+  }
+}
