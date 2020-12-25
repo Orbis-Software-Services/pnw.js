@@ -3,6 +3,8 @@
 const superagent = require('superagent');
 const baseURL = 'https://politicsandwar.com';
 
+const classes = require('./classes/exports');
+
 module.exports = class UserClient {
     #email;
     #password;
@@ -41,7 +43,6 @@ module.exports = class UserClient {
                     'sndmsg': 'Send Message'
                 }
                 this.#session.post(`${baseURL}/inbox/message`).send(data).type('form').set('Accept', 'text/plain').then(res => {
-                    fs.writeFileSync('kek.html', res.text);
                     if (res.text.includes('success')) {
                         resolve('Login success');
                         this.#loggedin = true;

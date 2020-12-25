@@ -1,6 +1,6 @@
 {
   "name": "@apocalypsecalculator/pnw.js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A powerful Node.js library for easy interaction with the Politics and War API",
   "main": "./index.js",
   "exports": {
@@ -34,7 +34,6 @@
     "node": ">=14.0.0"
   },
   "dependencies": {
-    "axios": "^0.21.1",
     "superagent": "^6.1.0"
   }
 }
