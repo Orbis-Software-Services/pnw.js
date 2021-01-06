@@ -3,8 +3,6 @@
 const superagent = require('superagent');
 const baseURL = 'https://politicsandwar.com';
 
-const classes = require('./classes/exports');
-
 module.exports = class UserClient {
     #email;
     #password;

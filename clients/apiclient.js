@@ -2,8 +2,8 @@
 
 const superagent = require('superagent');
 const baseURL = 'https://politicsandwar.com/api/';
-
-const classes = require('./classes/exports');
+const keyInfo = require('./classes/keyinfo');
+const nation = require('./classes/nation');
 
 module.exports = class APIClient {
     #api;
@@ -14,11 +14,11 @@ module.exports = class APIClient {
     }
     keyInfo() { //fetches info on api key
         return new Promise((resolve, reject) => {
-            this.#session.get(`${baseURL}v2/nations/${this.#api}/&min_score=8000`).then(res => {
+            this.#session.get(`${baseURL}v2/nations/${this.#api}/&min_score=9000`).then(res => {
                 let data = JSON.parse(res.text);
                 if (data.api_request.success) {
                     let key = data.api_request.api_key_details;
-                    resolve(new classes.keyInfo(key));
+                    resolve(new keyInfo(key));
                 }
                 else {
                     reject(`API request failed: ${data.api_request.error_msg}`);
@@ -31,12 +31,15 @@ module.exports = class APIClient {
             this.#session.get(`${baseURL}nation/id=${id}&key=${this.#api}`).then(res => {
                 let data = JSON.parse(res.text);
                 if (data.success) {
-                    resolve(new classes.nation(data));
+                    resolve(new nation(data));
                 }
                 else {
                     reject(`API request failed: ${data.general_message}`);
                 }
             }).catch(err => reject(`API request failed: ${err}`));
         })
+    }
+    getCity(id) { //fetch city info
+        
     }
 }

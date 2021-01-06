@@ -3,8 +3,9 @@ A powerful Node.js library for easy interaction with the Politics and War API
 
 To start using this library, simple do
 ```bash
-npm install pnw.js
+npm install @apocalypsecalculator/pnw.js
 ```
+(I will unscope this package later)
 
 This library is Promise-based.
 
