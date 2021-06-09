@@ -1,4 +1,7 @@
 # pnw.js
+
+## UPDATE! This library will be entirely reconstructed
+
 A powerful Node.js library for easy interaction with the Politics and War API
 
 To start using this library, simple do
